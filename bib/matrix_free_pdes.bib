@@ -48,3 +48,153 @@
     Publisher = {Association for Computing Machinery},
     URL = {https://doi.org/10.1145/3295500.3356198},
     Year = {2019}}
+
+@inbook{jiang2020meshfreeflownet,
+    Author = {Jiang, Chiyu "Max" and Esmaeilzadeh, Soheil and 
+        Azizzadenesheli, Kamyar and Kashinath, Karthik and Mustafa, 
+        Mustafa and Tchelepi, Hamdi A. and Marcus, Philip and Prabhat 
+        and Anandkumar, Anima},
+    Title = {MeshfreeFlowNet: A Physics-Constrained Deep Continuous 
+        Space-Time  Super-Resolution Framework},
+    Year = {2020},
+    ISBN = {9781728199986},
+    Publisher = {IEEE Press},
+    Abstract = {We propose MeshfreeFlowNet, a novel deep learning-based 
+        super-resolution framework  to generate continuous (grid-free) 
+        spatio-temporal solutions from the low-resolution inputs. While 
+        being computationally efficient, MeshfreeFlowNet accurately 
+        recovers the fine-scale quantities of interest. MeshfreeFlowNet 
+        allows for: (i) the output to be sampled at all spatio-temporal 
+        resolutions, (ii) a set of Partial Differential Equation (PDE) 
+        constraints to be imposed, and (iii) training on fixed-size 
+        inputs on arbitrarily sized spatio-temporal domains owing to 
+        its fully convolutional encoder.We empirically study the 
+        performance of MeshfreeFlowNet on the task of super-resolution
+        of turbulent flows in the Rayleigh-Benard convection problem. 
+        Across a diverse set of evaluation metrics, we show that 
+        MeshfreeFlowNet significantly outperforms existing baselines. 
+        Furthermore, we provide a large scale implementation of 
+        MeshfreeFlowNet and show that it efficiently scales across 
+        large clusters, achieving 96.80% scaling efficiency on up to 
+        128 GPUs and a training time of less than 4 minutes. We provide
+        an open-source implementation of our method that supports 
+        arbitrary combinations of PDE constraints 1.},
+    BookTitle = {Proceedings of the International Conference for High 
+        Performance Computing, Networking, Storage and Analysis},
+    ArticleNo = {9},
+    NumPages = {15}}
+
+@inproceedings{rudi2015extreme-scale,
+    Author = {Rudi, Johann and Malossi, A. Cristiano I. and Isaac, 
+        Tobin and Stadler, Georg and Gurnis, Michael and Staar, Peter 
+        W. J. and Ineichen, Yves and Bekas, Costas and Curioni, 
+        Alessandro and Ghattas, Omar},
+    Title = {An Extreme-Scale Implicit Solver for Complex PDEs: Highly 
+        Heterogeneous Flow in Earth's Mantle},
+    Year = {2015},
+    ISBN = {9781450337236},
+    Publisher = {Association for Computing Machinery},
+    Address = {New York, NY, USA},
+    URL = {https://doi.org/10.1145/2807591.2807675},
+    DOI = {10.1145/2807591.2807675},
+    Abstract = {Mantle convection is the fundamental physical process 
+    within earth's interior responsible for the thermal and geological 
+    evolution of the planet, including plate tectonics. The mantle is 
+    modeled as a viscous, incompressible, non-Newtonian fluid. The wide
+    range of spatial scales, extreme variability and anisotropy in 
+    material properties, and severely nonlinear rheology have made 
+    global mantle convection modeling with realistic parameters 
+    prohibitive. Here we present a new implicit solver that exhibits 
+    optimal algorithmic performance and is capable of extreme scaling 
+    for hard PDE problems, such as mantle convection. To maximize 
+    accuracy and minimize runtime, the solver incorporates a number of 
+    advances, including aggressive multi-octree adaptivity, mixed continuous-discontinuous discretization, arbitrarily-high-order 
+    accuracy, hybrid spectral/geometric/algebraic multigrid, and novel 
+    Schur-complement preconditioning. These features present enormous 
+    challenges for extreme scalability. We demonstrate that---contrary 
+    to conventional wisdom---algorithmically optimal implicit solvers 
+    can be designed that scale out to 1.5 million cores for severely 
+    nonlinear, ill-conditioned, heterogeneous, and anisotropic PDEs.},
+    BookTitle = {Proceedings of the International Conference for High 
+        Performance Computing, Networking, Storage and Analysis},
+    ArticleNo = {5},
+    NumPages = {12},
+    Location = {Austin, Texas},
+    Series = {SC '15}}
+
+@inproceedings{olschanowsky2014study,
+    Author = {Olschanowsky, Catherine and Strout, Michelle Mills and 
+        Guzik, Stephen and Loffeld, John and Hittinger, Jeffrey},
+    Title = {A Study on Balancing Parallelism, Data Locality, and 
+        Recomputation in Existing PDE Solvers},
+    Year = {2014},
+    ISBN = {9781479955008},
+    Publisher = {IEEE Press},
+    URL = {https://doi.org/10.1109/SC.2014.70},
+    DOI = {10.1109/SC.2014.70},
+    Abstract = {Structured-grid PDE solver frameworks parallelize over 
+        boxes, which are rectangular domains of cells or faces in a 
+        structured grid. In the Chombo framework, the box sizes are 
+        typically 163 or 323, but larger box sizes such as 1283 would 
+        result in less surface area and therefore less storage, 
+        copying, and/or ghost cells communication overhead. 
+        Unfortunately, current on-node parallelization schemes perform 
+        poorly for these larger box sizes. In this paper, we 
+        investigate 30 different inter-loop optimization strategies
+        and demonstrate the parallel scaling advantages of some of 
+        these variants on NUMA multicore nodes. Shifted, fused, and communication-avoiding variants for 1283 boxes result in close 
+        to ideal parallel scaling and come close to matching the
+        performance of 163 boxes on three different multicore systems 
+        for a benchmark that is a proxy for program idioms found in 
+        Computational Fluid Dynamic (CFD) codes.},
+    BookTitle = {Proceedings of the International Conference for High 
+        Performance Computing, Networking, Storage and Analysis},
+    Pages = {793–804},
+    NumPages = {12},
+    Location = {New Orleans, Louisana},
+    Series = {SC '14}}
+
+
+@inproceedings{obersteiner2017highly
+    Author = {Obersteiner, Michael and Hinojosa, Alfredo Parra and 
+        Heene, Mario and Bungartz, Hans-Joachim and Pfluger, Dirk},
+    Title = {A Highly Scalable, Algorithm-Based Fault-Tolerant Solver 
+        for Gyrokinetic Plasma Simulations},
+    Year = {2017},
+    ISBN = {9781450351256},
+    Publisher = {Association for Computing Machinery},
+    Address = {New York, NY, USA},
+    URL = {https://doi.org/10.1145/3148226.3148229},
+    DOI = {10.1145/3148226.3148229},
+    Abstract = {With future exascale computers expected to have 
+        millions of compute units distributedamong thousands of nodes,
+        system faults are predicted to become more frequent. Fault 
+        tolerance will thus play a key role in HPC at this scale. In 
+        this paper we focus on solving the 5-dimensional gyrokinetic 
+        Vlasov-Maxwell equations using the application code GENE as it 
+        represents a high-dimensional and resource-intensive problem 
+        which is a natural candidate for exascale computing. We discuss 
+        the Fault-Tolerant Combination Technique, a resilient version 
+        of the Combination Technique, a method to increase the 
+        discretization resolution of existing PDE solvers. For the 
+        first time, we present an efficient, scalable and 
+        fault-tolerant implementation of this algorithm for plasma 
+        physics simulations based on a manager-worker model and test it 
+        under very realistic and pessimistic environments with 
+        simulated faults. We show that the Fault-Tolerant Combination 
+        Technique - an algorithm-based forward recovery method - can 
+        tolerate a large number of faults with a low overhead and at an 
+        acceptable loss in accuracy. Our parallel experiments with up 
+        to 32k cores show good scalability at a relative parallel 
+        efficiency of 93.61%. We conclude that algorithm-based 
+        solutions to fault tolerance are attractive for this type of 
+        problems.},
+    BookTitle = {Proceedings of the 8th Workshop on Latest Advances in 
+        Scalable Algorithms for Large-Scale Systems},
+    ArticleNo = {2},
+    NumPages = {8},
+    Keywords = {exascale, fault tolerance, plasma simulations, 
+        resilience, combination technique, sparse grids},
+    Location = {Denver, Colorado},
+    Series = {ScalA '17}}
+    
