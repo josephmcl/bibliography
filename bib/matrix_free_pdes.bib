@@ -98,23 +98,26 @@
     URL = {https://doi.org/10.1145/2807591.2807675},
     DOI = {10.1145/2807591.2807675},
     Abstract = {Mantle convection is the fundamental physical process 
-    within earth's interior responsible for the thermal and geological 
-    evolution of the planet, including plate tectonics. The mantle is 
-    modeled as a viscous, incompressible, non-Newtonian fluid. The wide
-    range of spatial scales, extreme variability and anisotropy in 
-    material properties, and severely nonlinear rheology have made 
-    global mantle convection modeling with realistic parameters 
-    prohibitive. Here we present a new implicit solver that exhibits 
-    optimal algorithmic performance and is capable of extreme scaling 
-    for hard PDE problems, such as mantle convection. To maximize 
-    accuracy and minimize runtime, the solver incorporates a number of 
-    advances, including aggressive multi-octree adaptivity, mixed continuous-discontinuous discretization, arbitrarily-high-order 
-    accuracy, hybrid spectral/geometric/algebraic multigrid, and novel 
-    Schur-complement preconditioning. These features present enormous 
-    challenges for extreme scalability. We demonstrate that---contrary 
-    to conventional wisdom---algorithmically optimal implicit solvers 
-    can be designed that scale out to 1.5 million cores for severely 
-    nonlinear, ill-conditioned, heterogeneous, and anisotropic PDEs.},
+        within earth's interior responsible for the thermal and 
+        geological evolution of the planet, including plate tectonics. 
+        The mantle is modeled as a viscous, incompressible, 
+        non-Newtonian fluid. The wide range of spatial scales, extreme 
+        variability and anisotropy in material properties, and severely 
+        nonlinear rheology have made global mantle convection modeling 
+        with realistic parameters prohibitive. Here we present a new 
+        implicit solver that exhibits optimal algorithmic performance 
+        and is capable of extreme scaling hard PDE problems, such as 
+        mantle convection. To maximize accuracy and minimize runtime, 
+        the solver incorporates a number of advances, including 
+        aggressive multi-octree adaptivity, mixed 
+        continuous-discontinuous discretization, arbitrarily-high-order 
+        accuracy, hybrid spectral/geometric/algebraic multigrid, and 
+        novel Schur-complement preconditioning. These features present 
+        enormous challenges for extreme scalability. We demonstrate 
+        that---contrary to conventional wisdom---algorithmically 
+        optimal implicit solvers can be designed that scale out to 1.5 
+        million cores for severely nonlinear, ill-conditioned, 
+        heterogeneous, and anisotropic PDEs.},
     BookTitle = {Proceedings of the International Conference for High 
         Performance Computing, Networking, Storage and Analysis},
     ArticleNo = {5},
@@ -142,7 +145,8 @@
         poorly for these larger box sizes. In this paper, we 
         investigate 30 different inter-loop optimization strategies
         and demonstrate the parallel scaling advantages of some of 
-        these variants on NUMA multicore nodes. Shifted, fused, and communication-avoiding variants for 1283 boxes result in close 
+        these variants on NUMA multicore nodes. Shifted, fused, and 
+        communication-avoiding variants for 1283 boxes result in close 
         to ideal parallel scaling and come close to matching the
         performance of 163 boxes on three different multicore systems 
         for a benchmark that is a proxy for program idioms found in 
@@ -154,8 +158,7 @@
     Location = {New Orleans, Louisana},
     Series = {SC '14}}
 
-
-@inproceedings{obersteiner2017highly
+@inproceedings{obersteiner2017highly,
     Author = {Obersteiner, Michael and Hinojosa, Alfredo Parra and 
         Heene, Mario and Bungartz, Hans-Joachim and Pfluger, Dirk},
     Title = {A Highly Scalable, Algorithm-Based Fault-Tolerant Solver 

@@ -1,15 +1,15 @@
-DOCUMENT=Bibliography
-BUILD_DIR=build
-TEST_DIR=test
-TEST_FILE=bib
-PDFLATEX_FLAGS= -output-directory=./$(BUILD_DIR) -jobname=$(DOCUMENT)
-
+output := Bibliography
+builddir := build
+testdir := test
+genfile := bib
+cc := xelatex
+bc := bibtex
+cflags := -output-directory=./$(builddir) -jobname=$(output)
 .bibs := $(shell find bib/ -type f -name '*.bib')
-null  :=
+null :=
 space := $(null) $(null)
 comma := ,
 .bibz := $(subst $(space),$(comma),$(strip $(.bibs)))
-
 texcontent  = "\\\\documentclass{article}\n"
 texcontent += "\\\\usepackage[margin=1.0in]{geometry}\n"
 texcontent += "\\\\begin{document}\n"
@@ -17,18 +17,18 @@ texcontent += "\\\\nocite{*}\n"
 texcontent += "\\\\bibliographystyle{test/annote}\n"
 texcontent += "\\\\bibliography{$(.bibz)}\n"
 texcontent += "\\\\end{document}\n"
+texcontent := $(subst $(space),$(null),$(strip $(texcontent)))
 
 all: build
 .PHONY: clean
 build: 
-	echo $(.bibz)
-	if [ ! -d "./$(BUILD_DIR)" ]; then mkdir ./$(BUILD_DIR); fi
-	@echo $(texcontent) > "./$(TEST_DIR)/$(TEST_FILE).tex"
-	pdflatex $(PDFLATEX_FLAGS) ./$(TEST_DIR)/$(TEST_FILE).tex
-	bibtex ./$(BUILD_DIR)/$(DOCUMENT).aux
-	pdflatex $(PDFLATEX_FLAGS) ./$(TEST_DIR)/$(TEST_FILE).tex
-	pdflatex $(PDFLATEX_FLAGS) ./$(TEST_DIR)/$(TEST_FILE).tex
+	if [ ! -d "./$(builddir)" ]; then mkdir ./$(builddir); fi
+	@echo $(texcontent) > "./$(testdir)/$(genfile).tex"
+	$(cc) $(cflags) ./$(testdir)/$(genfile).tex
+	$(bc) ./$(builddir)/$(output).aux
+	$(cc) $(cflags) ./$(testdir)/$(genfile).tex
+	$(cc) $(cflags) ./$(testdir)/$(genfile).tex
 view: 
-	open ./$(BUILD_DIR)/$(DOCUMENT).pdf
+	open ./$(builddir)/$(output).pdf
 clean:
-	rm -rf ./$(BUILD_DIR)
+	rm -rf ./$(builddir)
