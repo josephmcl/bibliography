@@ -12,6 +12,8 @@ comma := ,
 .bibz := $(subst $(space),$(comma),$(strip $(.bibs)))
 texcontent  = "\\\\documentclass{article}\n"
 texcontent += "\\\\usepackage[margin=1.0in]{geometry}\n"
+texcontent += "\\\\usepackage{fontspec}\n"
+texcontent += "\\\\setmainfont{XITSMath-Regular.otf}\n"
 texcontent += "\\\\begin{document}\n"
 texcontent += "\\\\nocite{*}\n"
 texcontent += "\\\\bibliographystyle{test/annote}\n"
