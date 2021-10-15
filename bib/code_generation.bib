@@ -11,7 +11,7 @@
         programming techniques in the field of high performance 
         computing and go into detail about recent additions of such 
         into the Dune framework.},
-    Booktitle = {2019 IEEE/ACM 14th International Workshop on Software 
+    BookTitle = {2019 IEEE/ACM 14th International Workshop on Software 
         Engineering for Science (SE4Science)}, 
     Title = {An HPC Perspective on Generative Programming}, 
     Year = {2019},
@@ -19,3 +19,46 @@
     Number = {},
     Pages = {9-16},
     DOI = {10.1109/SE4Science.2019.00008}}
+
+@article{kempf2019automatic,
+    Author = {Kempf, Dominic and He\ss{}, Ren\'{e} and M\"{u}thing, 
+        Steffen and Bastian, Peter},
+    Title = {Automatic Code Generation for High-Performance 
+        Discontinuous Galerkin Methods on Modern Architectures},
+    Year = {2020},
+    Issue_Date = {January 2021},
+    Publisher = {Association for Computing Machinery},
+    Address = {New York, NY, USA},
+    Volume = {47},
+    Number = {1},
+    ISSN = {0098-3500},
+    URL = {https://doi.org/10.1145/3424144},
+    DOI = {10.1145/3424144},
+    Abstract = {SIMD vectorization has lately become a key challenge in 
+        high-performance computing. However, hand-written explicitly 
+        vectorized code often poses a threat to the software’s 
+        sustainability. In this publication, we solve this 
+        sustainability and performance portability issue by enriching 
+        the simulation framework dune-pdelab with a code generation
+        approach. The approach is based on the well-known 
+        domain-specific language UFL but combines it with loopy, a more 
+        powerful intermediate representation for the computational 
+        kernel. Given this flexible tool, we present and implement a 
+        new class of vectorization strategies for the assembly of 
+        Discontinuous Galerkin methods on hexahedral meshes exploiting 
+        the finite element’s tensor product structure. The 
+        performance-optimal variant from this class is chosen by the 
+        code generator through an auto-tuning approach. The 
+        implementation is done within the open source PDE software 
+        framework Dune and the discretization module dune-pdelab. The 
+        strength of the proposed approach is illustrated with 
+        performance measurements for DG schemes for a scalar diffusion 
+        reaction equation and the Stokes equation. In our measurements, 
+        we utilize both the AVX2 and the AVX512 instruction set, 
+        achieving 30% to 40% of the machine’s theoretical peak 
+        performance for one matrix-free application of the operator.},
+    Journal = {ACM Trans. Math. Softw.},
+    Month = dec,
+    ArticleNo = {6},
+    NumPages = {31},
+    Keywords = {Code generation, Galerkin methods}}
