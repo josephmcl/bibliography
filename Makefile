@@ -25,6 +25,7 @@ all: build
 .PHONY: clean
 build: 
 	if [ ! -d "./$(builddir)" ]; then mkdir ./$(builddir); fi
+	if [ ! -d "./$(testdir)" ]; then mkdir ./$(testdir); fi
 	@echo $(texcontent) > "./$(testdir)/$(genfile).tex"
 	$(cc) $(cflags) ./$(testdir)/$(genfile).tex
 	$(bc) ./$(builddir)/$(output).aux
