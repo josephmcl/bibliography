@@ -1,6 +1,6 @@
 output := Bibliography
 builddir := build
-testdir := test
+testdir := .test
 genfile := bib
 cc := xelatex
 bc := bibtex
@@ -16,7 +16,7 @@ texcontent += "\\\\usepackage{fontspec}\n"
 texcontent += "\\\\setmainfont{XITSMath-Regular.otf}\n"
 texcontent += "\\\\begin{document}\n"
 texcontent += "\\\\nocite{*}\n"
-texcontent += "\\\\bibliographystyle{test/annote}\n"
+texcontent += "\\\\bibliographystyle{$(testdir)/annote}\n"
 texcontent += "\\\\bibliography{$(.bibz)}\n"
 texcontent += "\\\\end{document}\n"
 texcontent := $(subst $(space),$(null),$(strip $(texcontent)))
