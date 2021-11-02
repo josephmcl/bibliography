@@ -59,3 +59,38 @@
         Computing, Networking, Storage and Analysis},
     Publisher = {Association for Computing Machinery},
     Series = {SC '13}}
+
+
+@incollection{dongarra2014slate,
+    Title = {Accelerating numerical dense linear algebra calculations 
+        with GPUs},
+    Abstract = {This chapter presents the current best design and 
+        implementation practices for the acceleration of dense linear 
+        algebra (DLA) on GPUs. Examples are given with fundamental 
+        algorithms – from the matrix-matrix multiplication kernel 
+        written in CUDA to the higher level algorithms for solving 
+        linear systems, eigenvalue and SVD problems. The 
+        implementations are available through the MAGMA library – a 
+        redesign for GPUs of the popular LAPACK. To generate the 
+        extreme level of parallelism needed for the efficient use of 
+        GPUs, algorithms of interest are redesigned and then split 
+        into well-chosen computational tasks. The tasks execution is 
+        scheduled over the computational components of a hybrid system 
+        of multi- core CPUs with GPU accelerators using either static 
+        scheduling or a light-weight runtime system. The use of 
+        light-weight runtime systems keeps scheduling overhead low, 
+        similar to static scheduling, while enabling the expression of 
+        parallelism through sequential-like code. This simplifies the 
+        development effort and allows the exploration of the unique 
+        strengths of the various hardware components.},
+    Author = {Dongarra, Jack and Gates, Mark and Haidar, Azzam and 
+        Kurzak, Jakub and Luszczek, Piotr and Tomov, Stanimire and 
+        Yamazaki, Ichitaro},
+    BookTitle = {Numerical computations with GPUs},
+    Pages = {3--28},
+    Year = {2014},
+    Publisher = {Springer}}
+
+
+
+    
