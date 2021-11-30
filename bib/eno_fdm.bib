@@ -1,6 +1,15 @@
 @incollection{harten1997uniformly,
     Title = {Uniformly high-order accurate nonoscillatory schemes. I},
     Author = {Harten, Ami and Osher, Stanley},
+    Abstract = {We begin the construction and the analysis of 
+        nonoscillatory shock capturing methods for the approximation of 
+        hyperbolic conservation laws. These schemes share many 
+        desirable properties with total variation diminishing schemes, 
+        but TVD schemes have at most first order accuracy, in the 
+        sense of truncation error, at extrema of the solution. In this 
+        paper we construct a uniformly second order approximation, 
+        which is nonoscillatory in the sense that the number of extrema 
+        of the discrete solution is not increasing in time.},
     BookTitle = {Upwind and High-Resolution Schemes},
     Pages = {187--217},
     Year = {1997},
@@ -11,7 +20,93 @@
         schemes, III},
     Author = {Harten, Ami and Engquist, Bjorn and Osher, Stanley and 
         Chakravarthy, Sukumar R},
+    Abstract = {We continue the construction and the analysis of 
+        essentially non- oscillatory shock capturing methods for the 
+        approximation of hyperbolic conservation laws. We present an 
+        hierarchy of uniformly high-order accurate schemes which 
+        generalizes Godunov’s scheme and its second-order accurate 
+        MUSCL extension to an arbitrary order of accuracy. The design 
+        involves an essentially non-oscillatory piecewise polynomial 
+        reconstruction of the solution from its cell averages, time 
+        evolution through an approximate solution of the resulting 
+        initial value problem, and averaging of this approximate 
+        solution over each cell. The reconstruction algorithm is 
+        derived from a new interpolation technique that, when applied 
+        to piecewise smooth data, gives high-order accuracy whenever 
+        the function is smooth but avoids a Gibbs phenomenon at 
+        discontinuities. Unlike standard finite difference methods 
+        this procedure uses an adaptive stencil of grid points and, 
+        consequently, the resulting schemes are},
     BookTitle = {Upwind and high-resolution schemes},
     Pages = {218--290},
     Year = {1987},
     Publisher = {Springer}}
+
+@incollection{shu1998essentially,
+    Title = {Essentially non-oscillatory and weighted essentially 
+        non-oscillatory schemes for hyperbolic conservation laws},
+    Author = {Shu, Chi-Wang},
+    Author = {In these lecture notes we describe the construction, 
+        analysis, and application of ENO (Essentially Non-Oscillatory) 
+        and WENO (Weighted Essentially Non-Oscillatory) schemes for 
+        hyperbolic con- servation laws and related Hamilton-Jacobi 
+        equations. ENO and WENO schemes are high order accurate finite 
+        difference schemes designed for problems with piecewise smooth 
+        solutions containing discontinuities. The key idea lies at the approximation level, where a nonlinear adaptive procedure is 
+        used to automatically choose the locally smoothest stencil, 
+        hence avoiding crossing discontinuities in the interpolation 
+        procedure as much as possible. ENO and WENO schemes have been 
+        quite successful in applications, especially for problems 
+        containing both shocks and complicated smooth solution 
+        structures, such as compressible turbulence simulations 
+        and aeroacoustics.
+        These lecture notes are basically self-contained. It is our 
+        hope that with these notes and with the help of the quoted 
+        references, the reader can understand the algorithms and code 
+        them up for applications. Sample codes are also available from 
+        the author.},
+    BookTitle = {Advanced numerical approximation of nonlinear 
+        hyperbolic equations},
+    Pages = {325--432},
+    Year = {1998},
+    Publisher = {Springer}}
+
+@article{shu2020essentially,
+    Title = {Essentially non-oscillatory and weighted essentially 
+        non-oscillatory schemes},
+    Author = {Shu, Chi-Wang},
+    Abstract = {Essentially non-oscillatory (ENO) and weighted ENO 
+        (WENO) schemes were designed for solving hyperbolic and 
+        convection-diffusion equations with possibly discontinuous 
+        solutions or solutions with sharp gradient regions. The main 
+        idea of ENO and WENO schemes is actually an approximation 
+        procedure, aimed at achieving arbitrarily high order accuracy 
+        in smooth regions and resolving shocks or other discontinuities 
+        sharply and in an essentially non-oscillatory fashion. Both 
+        finite volume and finite difference schemes have been designed 
+        using the ENO or WENO procedure, and these schemes are very 
+        popular in applications, most noticeably in computational fluid 
+        dynamics, but also in other areas of computational physics and 
+        engineering. Since the main idea of the ENO and WENO schemes 
+        is an approximation procedure not directly related to partial 
+        differential equations (PDEs), ENO and WENO schemes also have 
+        non-PDE applications. In this paper we will survey the basic 
+        ideas behind ENO and WENO schemes, discuss their properties, 
+        and present examples of their applications to different types 
+        of PDEs as well as to non-PDE problems.},
+    Journal = {Acta Numerica},
+    Volume = {29},
+    Pages = {701--762},
+    Year = {2020},
+    Publisher = {Cambridge University Press}}
+
+@article{liu1994weighted,
+  Title = {Weighted essentially non-oscillatory schemes},
+  Author = {Liu, Xu-Dong and Osher, Stanley and Chan, Tony},
+  Journal = {Journal of computational physics},
+  Volume = {115},
+  Number = {1},
+  Pages = {200--212},
+  Year = {1994},
+  Publisher = {Elsevier}}
+  
