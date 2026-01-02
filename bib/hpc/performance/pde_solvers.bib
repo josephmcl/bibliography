@@ -1,0 +1,93 @@
+@article{fischer2020scalability,
+    Title = {Scalability of high-performance PDE solvers},
+    Author = {Fischer, Paul and Min, Misun and Rathnayake, Thilina and 
+        Dutta, Som and Kolev, Tzanio and Dobrev, Veselin and Camier, 
+        Jean-Sylvain and Kronbichler, Martin and Warburton, Tim and 
+        {\'S}wirydowicz, Kasia and others},
+    Abstract = {Performance tests and analyses are critical to 
+        effective high-performance computing software development and
+        are central components in the design and implementation of
+        computational algorithms for achieving faster simulations on 
+        existing and future computing architectures for large-scale 
+        application problems. In this article, we explore performance 
+        and space-time trade-offs for important compute-intensive 
+        kernels of large-scale numerical solvers for partial 
+        differential equations (PDEs) that govern a wide range of 
+        physical applications. We consider a sequence of PDE-motivated 
+        bake-off problems designed to establish best practices for 
+        efficient high-order simulations across a variety of codes and 
+        platforms. We measure peak performance (degrees of freedom per 
+        second) on a fixed number of nodes and identify effective code 
+        optimization strategies for each architecture. In addition to 
+        peak performance, we identify the minimum time to solution at 
+        80% parallel efficiency. The performance analysis is based on 
+        spectral and p-type finite elements but is equally applicable 
+        to a broad spectrum of numerical PDE discretizations, including 
+        finite difference, finite volume, and h-type finite elements.},
+    Journal = {The International Journal of High Performance Computing 
+        Applications},
+    Volume = {34},
+    Number = {5},
+    Pages = {562--586},
+    Year = {2020},
+    Publisher = {SAGE Publications Sage UK: London, England}}
+
+@article{camier2023accelerating,
+    Title = {Accelerating high-order mesh optimization using finite 
+        element partial assembly on GPUs},
+    Author = {Camier, Jean-Sylvain and Dobrev, Veselin and Knupp, Patrick 
+        and Kolev, Tzanio and Mittal, Ketan and Rieben, Robert and Tomov, 
+        Vladimir},
+    Abstract = {In this paper we present a new GPU-oriented mesh 
+        optimization method based on high- order finite elements. Our 
+        approach relies on node movement with fixed topology, through the 
+        Target-Matrix Optimization Paradigm (TMOP) and uses a global 
+        nonlinear solve over the whole computational mesh, i.e., all mesh 
+        nodes are moved together. A key property of the method is that 
+        the mesh optimization process is recast in terms of finite 
+        element operations, which allows us to utilize recent advances in 
+        the field of GPU-accelerated high-order finite element 
+        algorithms. For example, we reduce data motion by using tensor 
+        factorization and matrix-free methods, which have superior 
+        performance characteristics compared to traditional full finite 
+        element matrix assembly and offer advantages for GPU-based HPC 
+        hardware. We describe the major mathematical components of the 
+        method along with their efficient GPU-oriented implementation. 
+        In addition, we propose an easily reproducible mesh optimization 
+        test that can serve as a performance benchmark for the mesh 
+        optimization community.},
+    Journal = {Journal of Computational Physics},
+    Volume = {474},
+    Pages = {111808},
+    Year = {2023},
+    Publisher = {Elsevier},
+    Note = {This paper succeeds ``The target-matrix optimization paradigm 
+        for high-order meshes''.}}
+
+@article{dobrev2019target,
+    Title = {The target-matrix optimization paradigm for high-order 
+        meshes},
+    Author = {Dobrev, Veselin and Knupp, Patrick and Kolev, Tzanio and 
+        Mittal, Ketan and Tomov, Vladimir},
+    Abstract = {We describe a framework for controlling and improving the 
+        quality of high-order finite element meshes based on extensions 
+        of the Target-Matrix Optimization Paradigm (TMOP) of [24]. This 
+        approach allows high-order applications to have a very precise 
+        control over local mesh quality, while still improving the mesh 
+        globally. We address the adaption of various TMOP components to 
+        the settings of general isoparametric element mappings, 
+        including the mesh quality metric in 2D and 3D, the selection of 
+        sample points and the solution of the resulting mesh optimization 
+        problem. We also investigate additional practical concerns, such 
+        as tangential relaxation and restricting the deviation from the 
+        original mesh. The benefits of the new high-order TMOP algorithms 
+        are illustrated on a number of test problems and examples from a 
+        high-order arbitrary Eulerian-Lagrangian (ALE) application [6]. 
+        Our implementation is freely available in an open-source library 
+        form [31].},
+    Journal = {SIAM Journal on Scientific Computing},
+    Volume = {41},
+    Number = {1},
+    Pages = {B50--B68},
+    Year = {2019},
+    Publisher = {SIAM}}
