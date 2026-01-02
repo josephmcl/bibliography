@@ -1,9 +1,9 @@
-name: Build and Update Latest Release
+name: Build and Update PDF Release
 
 on:
   push:
     branches:
-      - main # Triggers on every push to the main branch
+      - main
 
 jobs:
   build_and_release:
@@ -19,17 +19,13 @@ jobs:
         uses: xu-cheng/texlive-action@v2
         with:
           run: |
-            make # Runs your Makefile which should use xelatex
+            make
 
-      - name: Update Latest Release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: latest # Use a fixed tag for continuous updates
-          name: Latest Build
-          body: "Automated build from the latest push to main."
-          files: |
-            main.pdf
-          # Ensures old files are replaced by new ones on every push
-          overwrite_files: true 
+      - name: Upload PDF to Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Use GitHub CLI to create or update the 'latest' release
+          # --clobber overwrites existing files of the same name
+          gh release delete latest --yes || true
+          gh release create latest ./build/Bibliography.pdf --title "Latest Bibliography" --notes "Automated build from latest push."
