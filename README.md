@@ -1,9 +1,11 @@
 # Bibliography
 
-**Requires XeLaTeX!**
+Requires XeLaTeX
 
-To view and ensure all sources do in-fact compile:
+[View the latest version](https://github.com/josephmcl/bibliography/releases/tag/latest)
 
+Build locally:
 ```bash
 make; make view
 ```
+
