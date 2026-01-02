@@ -1,10 +1,8 @@
 # Bibliography
 
-Requires XeLaTeX
+[Download PDF](https://github.com/josephmcl/bibliography/releases/download/latest/Bibliography.pdf)
 
-[View the latest version](https://github.com/josephmcl/bibliography/releases/tag/latest)
-
-Build locally:
+Or Build locally (XeLaTeX)
 ```bash
 make; make view
 ```
