@@ -1,6 +1,6 @@
 # Bibliography
 
-Most of the papers I've read during my phd. Makefile generates a collected bibliography.
+Most of the papers I've read during my research. Makefile generates an annotated bibliography. 
 
 [Download Latest PDF](https://github.com/josephmcl/bibliography/releases/download/latest/Bibliography.pdf)
 
