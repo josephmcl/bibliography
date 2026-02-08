@@ -1,8 +1,10 @@
 # Bibliography
 
-[Download PDF](https://github.com/josephmcl/bibliography/releases/download/latest/Bibliography.pdf)
+Most of the papers I've read during my research. Makefile generates an annotated bibliography. 
 
-Or build locally (XeLaTeX)
+The latest version is compiled every time a change is pushed to `main`. 
+
+[Download Latest PDF](https://github.com/josephmcl/bibliography/releases/download/latest/Bibliography.pdf) or clone and build locally (XeLaTeX)
 ```bash
 make; make view
 ```

@@ -12,7 +12,6 @@ space := $(null) $(null)
 comma := ,
 .bibz := $(subst $(space),$(comma),$(strip $(.bibs)))
 
-# Use a multi-line 'define' block for the LaTeX content
 define texcontent
 \\documentclass{article}
 \\usepackage[margin=1.0in]{geometry}
